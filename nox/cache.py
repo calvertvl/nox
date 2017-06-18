@@ -1,3 +1,4 @@
+import setuptools
 from dogpile.cache import make_region
 import getpass
 
