@@ -55,8 +55,8 @@ def all_packages(force_refresh=False):
 
 @click.command()
 @click.argument('queries', nargs=-1)
-@click.option('--force-refresh', is_flag=True)
-@click.option('--interactive', '-i', is_flag=True)
+@click.option('--force-refresh', is_flag=True, help='Force cache refresh')
+@click.option('--interactive', '-i', is_flag=True, help='Enable interactive mode')
 def main(queries, force_refresh, interactive):
     """Search a package in nix"""
     patterns = [re.compile(query, re.IGNORECASE) for query in queries]
