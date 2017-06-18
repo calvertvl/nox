@@ -80,6 +80,9 @@ def main(queries, force_refresh, interactive):
                 if inp[0] == 's':
                     action = 'shell'
                     inp = inp[1:]
+                elif inp[0] == 'q':
+                    action = 'quit'
+                    inp = inp[1:]
                 else:
                     action = 'install'
                 packages = [results[int(i) - 1] for i in inp.split()]
